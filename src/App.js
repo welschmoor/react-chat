@@ -3,9 +3,15 @@
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      Chat app
-      </header>
+      <div>
+        Chat History Goes here...
+      </div>
+<div className="formdiv">
+  <form className="form">
+    <input type="text" placeholder="enter message" required />
+    <button type="submit" childen="submit" >Submit</button>
+  </form>
+</div>
     </div>
   );
 }
