@@ -23,4 +23,19 @@
 
 
   const db = app.firestore()
-  const auth app.auth()
+  const auth = app.auth()
+  const provider = new firebase.auth.GoogleAuthProvider()
+  const storage = firebase.storage().ref('images')
+  const audio = firebase.storage().ref('audios')
+  const createTimeStamp = firebase.firestore.FieldValue.serverTimestamp // seems to be like an ID
+  const serverTimestamp = firebase.database.ServerValue.TIMESTAMP
+
+  export {
+      db,
+      auth,
+      provider,
+      storage,
+      audio,
+      createTimeStamp,
+      serverTimestamp,
+  }
