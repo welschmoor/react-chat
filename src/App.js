@@ -1,9 +1,10 @@
-
 import React from "react"
 import Login from "./components/Login.js"
 import useAuth from "./hooks/useAuth.js"
 
-import Sidebar from './components/Sidebar'
+import Sidebar from "./components/Sidebar"
+import Header from "./components/Header"
+import Main from "./components/Main"
 
 const App = () => {
   const user = useAuth()
@@ -14,18 +15,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <Sidebar user={user} />
-      <div>
-        Chat History Goes here...
-      </div>
-      <div className="formdiv">
-        <form className="form">
-          <input type="text" placeholder="enter message" required />
-          <button type="submit" childen="submit" >Submit</button>
-        </form>
+      <div className="maindiv">
+        <Header user={user} />
+        <Sidebar />
+        <Main />
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
