@@ -6,7 +6,7 @@ import { auth, provider } from "../firebase.js" // provider is what you're signi
 const Login = () => {
 
     const login = () => {
-        auth.signInWithRedirect(provider)
+        auth.signInWithRedirect(provider) // this takes us to Google to Sign In
     }
 
     return (
